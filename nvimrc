@@ -837,4 +837,8 @@ noremap <leader>Co :set cursorline cursorcolumn<CR>
 noremap <leader>Cc :set nocursorline nocursorcolumn<CR>
 
 set cursorline cursorcolumn
+autocmd InsertEnter * highlight CursorLine guibg=#000050 term=none cterm=none
+autocmd InsertLeave * highlight CursorLine guibg=#004000 term=none cterm=none
+autocmd InsertEnter * highlight CursorColumn ctermfg=White ctermbg=Yellow guibg=gray gui=bold term=none cterm=none
+autocmd InsertLeave * highlight CursorColumn ctermfg=Black ctermbg=Yellow guibg=gray gui=NONE term=none cterm=none
 
